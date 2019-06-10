@@ -1,24 +1,173 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
-    android:layout_height="match_parent">
-
-    <LinearLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="400dp"
+        android:layout_weight="10"
+        android:rowCount="3"
+        android:columnCount="3">
+        <LinearLayout
+            android:background="#ffffff"
+            android:layout_margin="1dp"
+            android:orientation="vertical"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:gravity="center">
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/calendar"
+                />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="ToolFrament"
-            android:textSize="20dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="空余时间" />
+        </LinearLayout>
+        <LinearLayout
+            android:background="#ffffff"
+            android:layout_margin="1dp"
+            android:orientation="vertical"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:gravity="center">
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/transfer"
+                />
 
-        <Button
-            android:id="@+id/bt"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="ToolFragment"
-            android:textAllCaps="false"/>
-    </LinearLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="语音转换文字" />
+        </LinearLayout>
+        <LinearLayout
+            android:background="#ffffff"
+            android:layout_margin="1dp"
+            android:orientation="vertical"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:gravity="center">
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/alarm"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="提醒" />
+        </LinearLayout>
+        <LinearLayout
+            android:background="#ffffff"
+            android:layout_margin="1dp"
+            android:orientation="vertical"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:gravity="center">
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/client"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="客户整理" />
+        </LinearLayout>
+        <LinearLayout
+            android:background="#ffffff"
+            android:layout_margin="1dp"
+            android:orientation="vertical"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:gravity="center">
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/bill"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="记账本" />
+        </LinearLayout>
+        <LinearLayout
+            android:background="#ffffff"
+            android:layout_margin="1dp"
+            android:orientation="vertical"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:gravity="center">
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/worktime"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="累计工作时间" />
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_margin="1dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:gravity="center"
+            android:background="#ffffff">
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/course_record"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="课程录制" />
+        </LinearLayout>
+        <LinearLayout
+            android:background="#ffffff"
+            android:layout_margin="1dp"
+            android:orientation="vertical"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:gravity="center">
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/filelib"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="材料库" />
+        </LinearLayout>
+        <LinearLayout
+            android:background="#ffffff"
+            android:layout_margin="1dp"
+            android:orientation="vertical"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:gravity="center">
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                />
+        </LinearLayout>
+    </GridLayout>
 </android.support.constraint.ConstraintLayout>

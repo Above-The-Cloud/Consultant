@@ -14,13 +14,13 @@ public class tool_fragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle saveInstanceState){
         View view = inflater.inflate(R.layout.tool_page, container, false);
-        Button bt = (Button)view.findViewById(R.id.bt);
-        bt.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View v){
-                Toast.makeText(getActivity(), "Tool_fragment上的按钮被点击了", Toast.LENGTH_SHORT).show();
-            }
-        });
+//        Button bt = (Button)view.findViewById(R.id.bt);
+//        bt.setOnClickListener(new View.OnClickListener(){
+//            @Override
+//            public void onClick(View v){
+//                Toast.makeText(getActivity(), "Tool_fragment上的按钮被点击了", Toast.LENGTH_SHORT).show();
+//            }
+//        });
         return view;
     }
 }
