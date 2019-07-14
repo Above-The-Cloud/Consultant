@@ -8,23 +8,38 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.Toast;
 import android.widget.ImageButton;
 import android.widget.TextView;
+
+import com.example.consultant.ui.login.LoginAndRegisterActivity;
 
 public class personal_fragment extends Fragment {
     private ImageButton ibtn1=null;
     private ImageButton ibtn2=null;
     private ImageButton ibtn3=null;
     private ImageButton ibtn4=null;
+    private ImageView ibtnIcon=null;
     private TextView tx1=null;
     private TextView tx2=null;
     private TextView tx3=null;
     private TextView tx4=null;
+    private TextView userName;
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle saveInstanceState){
         View view = inflater.inflate(R.layout.personal_page, container, false);
+        userName = (TextView)view.findViewById(R.id.userTextView);
+        ibtnIcon = (ImageView)view.findViewById(R.id.userIconview);
+        ibtnIcon.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(getActivity(), LoginAndRegisterActivity.class);
+                startActivity(i);
+            }
+        });
+//        userName.setText("叫什么名字好呢");
         ibtn1=(ImageButton)view.findViewById(R.id.imageView3);
         ibtn1.setOnClickListener(new View.OnClickListener(){
             @Override
