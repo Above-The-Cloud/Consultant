@@ -7,4 +7,5 @@ public class UrlConstants {
     public static String UserSch = "/service/user/get";
     public static String UserUpd =  "/service/user/update";
     public static String UserLgn =  "/service/user/login";
+    public static String disCreate = "/service/discussion/create";
 }

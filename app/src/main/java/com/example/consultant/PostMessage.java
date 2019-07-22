@@ -1,13 +1,13 @@
 package com.example.consultant;
 
-public class Message {
+public class PostMessage {
     private String userName;
     private String latestMsg;
 
     private int imageId;
     private String time;
 
-    public Message(String userName, String latestMsg, int imageId, String time) {
+    public PostMessage(String userName, String latestMsg, int imageId, String time) {
         this.userName = userName;
         this.latestMsg = latestMsg;
         this.imageId = imageId;

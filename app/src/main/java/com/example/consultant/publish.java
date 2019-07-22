@@ -7,7 +7,7 @@ import java.util.ArrayList;
 import android.widget.ListView;
 
 public class publish extends AppCompatActivity {
-    private List<Message> msgList= new ArrayList<>();
+    private List<PostMessage> msgList= new ArrayList<>();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -20,7 +20,7 @@ public class publish extends AppCompatActivity {
     private void initMessage()
     {
         for (int i=0;i<=15;i++){
-            Message msg = new Message("用户名", "时间", R.drawable.default_msg, "星期四");
+            PostMessage msg = new PostMessage("用户名", "时间", R.drawable.default_msg, "星期四");
             msgList.add(msg);}
     }
 }

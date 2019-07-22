@@ -17,7 +17,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class comment_fragment extends Fragment {
-    private List<Message> msgList= new ArrayList<>();
+    private List<PostMessage> msgList= new ArrayList<>();
     ImageButton ibn;
     Activity mActivity;
     @Nullable
@@ -51,7 +51,7 @@ public class comment_fragment extends Fragment {
     private void initMessage(){
         for(int i = 0; i < 3; i++){
             Log.d("调试日志", i+"");
-            Message msg = new Message("用户名", "2019-05-02 16:30", R.drawable.default_msg, "星期四");
+            PostMessage msg = new PostMessage("用户名", "2019-05-02 16:30", R.drawable.default_msg, "星期四");
             msgList.add(msg);
         }
     }

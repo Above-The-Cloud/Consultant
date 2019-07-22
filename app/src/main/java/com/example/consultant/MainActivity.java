@@ -3,13 +3,10 @@ package com.example.consultant;
 import android.os.Bundle;
 import android.support.design.widget.BottomNavigationView;
 import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.support.annotation.NonNull;
 import android.util.Log;
 import android.view.MenuItem;
-import android.widget.ListView;
 import android.widget.TextView;
 import android.support.v4.view.ViewPager;
 import java.util.ArrayList;
@@ -20,7 +17,7 @@ public class MainActivity extends AppCompatActivity {
     ViewPager viewPager;
     BottomNavigationView navView;
     List<Fragment> listFragment;
-    private List<Message> msgList = new ArrayList<>();
+    private List<PostMessage> msgList = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
