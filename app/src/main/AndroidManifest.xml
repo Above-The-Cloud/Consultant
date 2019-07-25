@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.consultant">
-    <uses-permission android:name="android.permission.INTERNET"></uses-permission>
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -9,7 +11,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".LoginAndRegisterActivity"></activity>
+        <activity android:name=".material_add"></activity>
+        <activity android:name=".material" />
+        <activity android:name=".LoginAndRegisterActivity" />
         <activity android:name=".note_bill" />
         <activity android:name=".client_add" />
         <activity android:name=".alert_add" />

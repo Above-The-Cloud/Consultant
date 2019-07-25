@@ -18,6 +18,7 @@ public class tool_fragment extends Fragment {
     private ImageView ibtn3=null;
     private ImageView ibtn4=null;
     private ImageView ibtn5=null;
+    private ImageView ibtn6=null;
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle saveInstanceState){
@@ -59,6 +60,14 @@ public class tool_fragment extends Fragment {
             @Override
             public void onClick(View v){
                 Intent i = new Intent(getActivity(), acount.class);
+                startActivity(i);
+            }
+        });
+        ibtn6=(ImageView)view.findViewById(R.id.img6);
+        ibtn6.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                Intent i = new Intent(getActivity(), material.class);
                 startActivity(i);
             }
         });

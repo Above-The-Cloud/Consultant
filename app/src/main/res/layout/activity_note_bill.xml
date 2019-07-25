@@ -4,6 +4,316 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".note_bill">
+    tools:context=".alert_add">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="记一笔"
+            android:textSize="20sp"
+            />
+        <View
+
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/divider_height"
+            android:layout_gravity="bottom"
+            android:background="?android:attr/listDivider" />
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:scrollbars="none">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:background="@color/theme_color">
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginBottom="20dp"
+                        android:text="心理咨询"
+                        android:textColor="@color/white"
+                        android:textSize="70px"/>
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:text="0.00"
+                        android:textSize="70px"
+                        android:textColor="@color/white"
+                        android:layout_weight="1"
+                        />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    >
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_weight="1">
+                        <ImageView
+                            android:id="@+id/img_consult"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            app:srcCompat="@drawable/consult"
+                            android:layout_gravity="center_horizontal"/>
+                        <TextView
+                            android:id="@+id/txt_consult"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="心理咨询"
+                            android:layout_gravity="center_horizontal"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_weight="1">
+
+                        <ImageView
+                            android:id="@+id/img_love"
+                            android:layout_width="40dp"
+                            android:layout_height="50dp"
+                            app:srcCompat="@drawable/love"
+                            android:layout_gravity="center_horizontal"/>
+
+                        <TextView
+                            android:id="@+id/txt_love"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:text="其他心理有关"/>
+                    </LinearLayout>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="时间："
+                        android:layout_marginLeft="7dp"
+                        android:layout_marginTop="12dp"/>
+                    <EditText
+                        android:layout_width="150dp"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="2dp"
+                        android:drawablePadding="8dp"
+                        android:layout_marginLeft="30dp"
+                        android:textSize="30px"
+                        />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="收入方式："
+                        android:layout_marginLeft="7dp"
+                        android:layout_marginTop="12dp"/>
+                    <Spinner
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"></Spinner>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="7dp"
+                        android:text="备注："
+                        android:layout_marginTop="12dp"/>
+                    <EditText
+                        android:text=""
+                        android:lines="5"
+                        android:gravity="top"
+                        android:layout_marginLeft="30dp"
+
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"/>
+                </LinearLayout>
+                <GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:columnCount="4"
+                    android:layout_gravity="center"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:layout_rowWeight="1"
+                        android:id="@+id/bt1"
+                        android:text="1"
+                        android:layout_marginLeft="5sp"
+                        android:textSize="15sp"
+                        android:layout_marginTop="15sp"
+
+                        android:layout_marginBottom="5sp"
+                        />
+                    <Button
+                        android:layout_rowWeight="1"
+                        android:id="@+id/bt2"
+                        android:text="2"
+                        android:textSize="15sp"
+                        android:layout_marginTop="15sp"
+
+                        android:layout_marginBottom="5sp"
+                        />
+                    <Button
+                        android:layout_rowWeight="1"
+                        android:id="@+id/bt3"
+                        android:text="3"
+                        android:textSize="15sp"
+                        android:layout_marginTop="15sp"
+
+                        android:layout_marginBottom="5sp"
+                        />
+                    <Button
+                        android:id="@+id/bt_cancel"
+                        android:text="取消"
+                        android:textSize="15sp"
+                        android:layout_marginTop="15sp"
+
+                        android:layout_marginBottom="5sp"
+                        android:layout_rowWeight="1"
+                        />
+                    <Button
+                        android:layout_rowWeight="1"
+                        android:id="@+id/bt4"
+                        android:text="4"
+                        android:layout_marginLeft="5sp"
+                        android:textSize="15sp"
+                        android:layout_marginTop="15sp"
+
+                        android:layout_marginBottom="5sp"
+                        />
+                    <Button
+                        android:layout_rowWeight="1"
+                        android:id="@+id/bt5"
+                        android:text="5"
+                        android:textSize="15sp"
+                        android:layout_marginTop="15sp"
+
+                        android:layout_marginBottom="5sp"
+                        />
+                    <Button
+                        android:layout_rowWeight="1"
+                        android:id="@+id/bt6"
+                        android:text="6"
+                        android:textSize="15sp"
+                        android:layout_marginTop="15sp"
+
+                        android:layout_marginBottom="5sp"
+                        />
+                    <Button
+                        android:id="@+id/bt_add"
+                        android:text="＋"
+                        android:textSize="15sp"
+                        android:layout_marginTop="15sp"
+
+                        android:layout_marginBottom="5sp"
+                        android:layout_rowWeight="1"
+                        />
+                    <Button
+                        android:layout_rowWeight="1"
+                        android:id="@+id/bt7"
+                        android:text="7"
+                        android:layout_marginLeft="5sp"
+                        android:textSize="15sp"
+                        android:layout_marginTop="15sp"
+
+                        android:layout_marginBottom="5sp"
+                        />
+                    <Button
+                        android:layout_rowWeight="1"
+                        android:id="@+id/bt8"
+                        android:text="8"
+                        android:textSize="15sp"
+                        android:layout_marginTop="15sp"
+
+                        android:layout_marginBottom="5sp"
+                        />
+                    <Button
+                        android:layout_rowWeight="1"
+                        android:id="@+id/bt9"
+                        android:text="9"
+                        android:textSize="15sp"
+                        android:layout_marginTop="15sp"
+
+                        android:layout_marginBottom="5sp"
+                        />
+
+                    <Button
+                        android:id="@+id/bt_minus"
+                        android:text="－"
+                        android:textSize="15sp"
+                        android:layout_marginTop="15sp"
+
+                        android:layout_marginBottom="5sp"
+                        android:layout_rowWeight="1"
+                        />
+
+
+
+                    <Button
+                        android:id="@+id/bt_dot"
+                        android:text="."
+                        android:layout_marginLeft="5sp"
+                        android:textSize="15sp"
+                        android:layout_marginTop="15sp"
+                        android:layout_rowWeight="1"
+                        android:layout_marginBottom="5sp"
+                        />
+                    <Button
+
+                        android:id="@+id/bt0"
+                        android:text="0"
+                        android:textSize="15sp"
+                        android:layout_marginTop="15sp"
+
+                        android:layout_marginBottom="5sp"
+                        android:layout_rowWeight="1"
+                        />
+                    <Button
+                        android:id="@+id/bt_mul"
+                        android:text="×"
+                        android:textSize="15sp"
+                        android:layout_marginTop="15sp"
+                        android:layout_rowWeight="1"
+                        android:layout_marginBottom="5sp"
+                        />
+                    <Button
+                        android:id="@+id/bt_yes"
+                        android:text="确认"
+                        android:textSize="15sp"
+                        android:layout_marginTop="15sp"
+                        android:layout_rowWeight="1"
+                        android:layout_marginBottom="5sp"
+                        />
+
+                </GridLayout>
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
 
 </android.support.constraint.ConstraintLayout>
