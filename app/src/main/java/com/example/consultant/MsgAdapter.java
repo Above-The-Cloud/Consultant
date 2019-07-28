@@ -30,6 +30,8 @@ public class MsgAdapter extends ArrayAdapter<PostMessage> {
         tvtitle.setText(msgRes.getUserName());
         TextView tvartist = (TextView)view.findViewById(R.id.tv_artist);
         tvartist.setText(msgRes.getLatestMsg());
+        TextView txcontent = (TextView)view.findViewById(R.id.tv_postcontent);
+        txcontent.setText(msgRes.getContent());
         return view;
     }
 }

@@ -20,7 +20,7 @@ public class scan extends AppCompatActivity {
     private void initMessage()
     {
         for (int i=0;i<=15;i++){
-            PostMessage msg = new PostMessage("用户名", "时间", R.drawable.default_msg, "星期四");
+            PostMessage msg = new PostMessage("用户名", "时间", "content",R.drawable.default_msg, "星期四");
             msgList.add(msg);}
     }
 }

@@ -70,6 +70,7 @@
     </FrameLayout>
 </LinearLayout>
     <TextView
+        android:id ="@+id/tv_postcontent"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="文字or文字+图\n\n\n"/>

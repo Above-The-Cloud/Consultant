@@ -4,11 +4,22 @@ public class PostMessage {
     private String userName;
     private String latestMsg;
 
+    public String getContent() {
+        return content;
+    }
+
+    public void setContent(String content) {
+        this.content = content;
+    }
+
+    private String content;
+
     private int imageId;
     private String time;
 
-    public PostMessage(String userName, String latestMsg, int imageId, String time) {
+    public PostMessage(String userName, String latestMsg, String content, int imageId, String time) {
         this.userName = userName;
+        this.content = content;
         this.latestMsg = latestMsg;
         this.imageId = imageId;
         this.time = time;
