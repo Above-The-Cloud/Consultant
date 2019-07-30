@@ -1,37 +1,76 @@
 package com.example.consultant;
-
+import android.graphics.drawable.Drawable;
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.ImageView;
 import android.widget.TextView;
-
+import com.example.consultant.AsyncImageLoader.ImageCallback;
 import java.util.List;
+import android.app.Activity;
+import android.widget.ListView;
 //7161315508
 public class MsgAdapter extends ArrayAdapter<PostMessage> {
-    private int resourceID;
-    public MsgAdapter(Context context, int textViewResourceId, List<PostMessage> objects)
-    {
-        super(context, textViewResourceId, objects);
-        resourceID = textViewResourceId;
+
+    private ListView listView;
+    private AsyncImageLoader asyncImageLoader;
+
+    public MsgAdapter(Activity activity, List<PostMessage> imageAndTexts, ListView listView) {
+        super(activity, 0, imageAndTexts);
+        this.listView = listView;
+        asyncImageLoader = new AsyncImageLoader();
     }
-    @Override
-    public View getView(int position, View convertView, ViewGroup parent)
-    {
-        PostMessage msgRes = getItem(position);
-        View view;
-        if(convertView == null){
-            view = LayoutInflater.from(getContext()).inflate(resourceID, parent, false);
+
+    public View getView(int position, View convertView, ViewGroup parent) {
+        Activity activity = (Activity) getContext();
+
+        // Inflate the views from XML
+        View rowView = convertView;
+        ViewCache viewCache;
+        if (rowView == null) {
+            LayoutInflater inflater = activity.getLayoutInflater();
+            rowView = inflater.inflate(R.layout.msg_item, null);
+            viewCache = new ViewCache(rowView);
+            rowView.setTag(viewCache);
+        } else {
+            viewCache = (ViewCache) rowView.getTag();
         }
-        else
-            view = convertView;
-        TextView tvtitle = (TextView)view.findViewById(R.id.tv_title);
-        tvtitle.setText(msgRes.getUserName());
-        TextView tvartist = (TextView)view.findViewById(R.id.tv_artist);
-        tvartist.setText(msgRes.getLatestMsg());
-        TextView txcontent = (TextView)view.findViewById(R.id.tv_postcontent);
-        txcontent.setText(msgRes.getContent());
-        return view;
+        PostMessage imageAndText = getItem(position);
+
+        // Load the image and set it on the ImageView
+        String imageUrl = imageAndText.getPath();
+        ImageView imageView = viewCache.getImageView();
+        imageView.setTag(imageUrl);
+        Drawable cachedImage = asyncImageLoader.loadDrawable(imageUrl, new ImageCallback() {
+            public void imageLoaded(Drawable imageDrawable, String imageUrl) {
+                ImageView imageViewByTag = (ImageView) listView.findViewWithTag(imageUrl);
+                if (imageViewByTag != null) {
+                    imageViewByTag.setImageDrawable(imageDrawable);
+                }
+            }
+        });
+        if (cachedImage == null) {
+            imageView.setImageResource(R.drawable.avatar);
+        }else{
+            imageView.setImageDrawable(cachedImage);
+        }
+        // Set the text on the TextView
+
+        TextView tvtitle = viewCache.gettv_title();
+        tvtitle.setText(imageAndText.getUserName());
+        TextView tvartist = viewCache.gettv_artist();
+        tvartist.setText(imageAndText.getTime());
+        TextView txcontent = viewCache.gettv_postcontent();
+        txcontent.setText(imageAndText.getContent());
+        return rowView;
     }
 }
+
+
+
+
+
+
+

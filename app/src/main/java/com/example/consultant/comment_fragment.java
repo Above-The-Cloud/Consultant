@@ -57,13 +57,25 @@ public class comment_fragment extends Fragment {
                         JSONArray datalist = jsonRes.getJSONObject("data").getJSONArray("discussion");
                         for(int i = 0; i < datalist.length(); i++)
                         {
+
                             JSONObject object = (JSONObject) datalist.get(i);
-                            PostMessage msg = new PostMessage(object.getJSONObject("user_info").getString("username"), object.getString("mtime"), object.getString("content"), R.drawable.default_msg, "星期四");
-                            msgList.add(msg);
+                            String username=object.getJSONObject("user_info").getString("username");
+                            Log.i("iamuser", username);
+                            String content=object.getString("content");
+                            String time=object.getString("mtime");
+                            String imageurl=object.getJSONObject("user_info").getString("avatar");
+
+                            PostMessage test=new PostMessage(username,content,imageurl,time);
+                            msgList.add(test);
+
+
 
                         }
-                        MsgAdapter adapter = new MsgAdapter(mActivity, R.layout.msg_item, msgList);
+
+
+
                         ListView lv = (ListView)mActivity.findViewById(R.id.list_view_msg);
+                        MsgAdapter adapter=new MsgAdapter(mActivity, msgList,lv);
                         lv.setAdapter(adapter);
 
                     }
@@ -96,15 +108,8 @@ public class comment_fragment extends Fragment {
         super.onStart();
         mActivity = getActivity();
         setButtonFunction();
-//        initMessage();
+
 
     }
-    private void initMessage(){
-        for(int i = 0; i < 3; i++){
-            Log.d("调试日志", i+"");
-            PostMessage msg = new PostMessage("用户名", "2019-05-02 16:30", "content",R.drawable.default_msg, "星期四");
 
-            msgList.add(msg);
-        }
-    }
 }

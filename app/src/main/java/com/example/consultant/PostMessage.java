@@ -3,7 +3,18 @@ package com.example.consultant;
 public class PostMessage {
     private String userName;
     private String latestMsg;
+    private String path;
+    private String content;
+    private String time;
+    private int imageId;
 
+    public PostMessage(String userName, String content, String path ,String time) {
+        this.userName = userName;
+        this.content = content;
+
+        this.time = time;
+        this.path=path;
+    }
     public String getContent() {
         return content;
     }
@@ -11,19 +22,15 @@ public class PostMessage {
     public void setContent(String content) {
         this.content = content;
     }
-
-    private String content;
-
-    private int imageId;
-    private String time;
-
-    public PostMessage(String userName, String latestMsg, String content, int imageId, String time) {
-        this.userName = userName;
-        this.content = content;
-        this.latestMsg = latestMsg;
-        this.imageId = imageId;
-        this.time = time;
+    public String getPath() {
+        return path;
     }
+
+    public void setPath(String path) {
+        this.path = path;
+    }
+
+
 
     public String getUserName() {
         return userName;
