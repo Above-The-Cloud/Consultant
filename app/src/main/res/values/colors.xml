@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#7D3FB5</color>
+    <color name="colorPrimary">#169bd5</color>
     <color name="colorPrimaryDark">#00574B</color>
     <color name="colorAccent">#D81B60</color>
     <color name="colorWhite">#ffffff</color>
@@ -16,11 +16,14 @@
     <color name="red_30p">#4CF44336</color>
     <color name="blue">#2196F3</color>
     <color name="grey">#9E9E9E</color>
+    <color name="user_link">#027db4</color>
+    <color name="button_color">#169bd5</color>
     <color name="grey_50p">#809E9E9E</color>
     <color name="grey_300">#E0E0E0</color>
     <color name="grey_700_96p">#F5616161</color>
     <color name="grey_300_96p">#F5E0E0E0</color>
     <color name="grey_900">#212121</color>
     <color name="grey_900_96p">#F5212121</color>
-    <color name="theme_color">#7D3FB5</color>
+    <color name="theme_">#7d3fb5</color>
+    <color name="theme_color">#000000</color>
 </resources>

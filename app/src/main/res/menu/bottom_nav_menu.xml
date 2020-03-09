@@ -2,13 +2,21 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
-        android:id="@+id/navigation_tools"
+        android:id="@+id/navigation_discover"
         android:icon="@drawable/icon_tools_fill"
-        android:title="@string/title_tools" />
+        android:title="@string/title_discover" />
     <item
-        android:id="@+id/navigation_comment"
-        android:icon="@drawable/icon_discover_fill"
-        android:title="@string/title_comment" />
+        android:id="@+id/navigation_question"
+        android:icon="@drawable/msg"
+        android:title="@string/title_question" />
+    <item
+        android:id="@+id/navigation_release"
+        android:icon="@drawable/msg"
+        android:title="发布"/>
+    <item
+        android:id="@+id/navigation_message"
+        android:icon="@drawable/msg"
+        android:title="@string/title_message" />
     <item
         android:id="@+id/navigation_personal"
         android:icon="@drawable/icon_people_fill"

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <!--<TextView-->
+    <!--    android:layout_width="wrap_content"-->
+    <!--    android:text="答答界面"-->
+    <!--    android:textSize="30sp"-->
+    <!--    android:layout_centerInParent="true"-->
+    <!--    android:layout_height="wrap_content"></TextView>-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/answer_view_pager"
+            android:layout_width="match_parent"
+            android:layout_height="400dp" />
+
+        <net.lucode.hackware.magicindicator.MagicIndicator
+            android:id="@+id/answer_magic_indicator"
+            android:layout_width="wrap_content"
+            android:layout_gravity="center"
+            android:layout_height="@dimen/common_navigator_height"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="支招" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="无能为力" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="换一个" />
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

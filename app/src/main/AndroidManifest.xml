@@ -2,8 +2,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.consultant">
 
-    <uses-permission android:name="android.permission.INTERNET" />
-
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -11,33 +9,34 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".material_add"></activity>
-        <activity android:name=".material" />
-        <activity android:name=".LoginAndRegisterActivity" />
-        <activity android:name=".note_bill" />
-        <activity android:name=".client_add" />
-        <activity android:name=".alert_add" />
-        <activity android:name=".income" />
-        <activity android:name=".acount" />
-        <activity android:name=".voice2text" />
-        <activity android:name=".client" />
-        <activity android:name=".alert" />
-        <activity android:name=".free" />
+        <activity android:name=".activities.ReleaseActivity"></activity>
+        <activity android:name=".former.material_add" />
+        <activity android:name=".former.material" />
+        <activity android:name=".activities.LoginAndRegisterActivity" />
+        <activity android:name=".former.note_bill" />
+        <activity android:name=".former.client_add" />
+        <activity android:name=".former.alert_add" />
+        <activity android:name=".former.income" />
+        <activity android:name=".activities.AcountActivity" />
+        <activity android:name=".former.voice2text" />
+        <activity android:name=".former.client" />
+        <activity android:name=".former.alert" />
+        <activity android:name=".former.free" />
         <activity
-            android:name=".EditActivity"
+            android:name=".activities.EditActivity"
             android:label="@string/title_activity_edit"
-            android:parentActivityName=".MainActivity"
+            android:parentActivityName=".activities.MainActivity"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".advice" />
-        <activity android:name=".settings" />
-        <activity android:name=".corporation" />
-        <activity android:name=".help" />
-        <activity android:name=".scan" />
-        <activity android:name=".publish" />
-        <activity android:name=".collect" />
-        <activity android:name=".attention" />
+        <activity android:name=".activities.AdviceActivity" />
+        <activity android:name=".former.settings" />
+        <activity android:name=".former.corporation" />
+        <activity android:name=".former.help" />
+        <activity android:name=".former.scan" />
+        <activity android:name=".former.publish" />
+        <activity android:name=".former.collect" />
+        <activity android:name=".former.attention" />
         <activity
-            android:name=".MainActivity"
+            android:name=".activities.MainActivity"
             android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -46,5 +45,7 @@
             </intent-filter>
         </activity>
     </application>
+
+    <uses-permission android:name="android.permission.INTERNET" />
 
 </manifest>

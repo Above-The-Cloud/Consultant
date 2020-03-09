@@ -15,7 +15,7 @@ import com.loopj.android.http.TextHttpResponseHandler;
 
 public class AsyncHttpUtils {
 
-    private static final String BASE_URL = UrlConstants.domain;
+    private static final String BASE_URL = Constants.domain;
 
     private static AsyncHttpClient client = new AsyncHttpClient();
 

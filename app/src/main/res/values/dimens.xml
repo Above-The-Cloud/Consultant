@@ -10,5 +10,6 @@
     <dimen name="divider_height_shallow">0.5dp</dimen>
     <dimen name="app_bar_height">180dp</dimen>
     <dimen name="fab_margin">16dp</dimen>
+    <dimen name="common_navigator_height">45dp</dimen>
     <dimen name="text_margin">16dp</dimen>
 </resources>

@@ -1,11 +1,14 @@
 <resources>
-    <string name="app_name">Consultant</string>
+    <string name="app_name">PsyHack</string>
     <string name="title_information">信息</string>
     <string name="title_tools">工具</string>
     <string name="title_dashboard">工作台</string>
     <string name="title_discover">发现</string>
     <string name="title_personal">我的</string>
     <string name="title_comment">讨论</string>
+    <string name="title_question">问答</string>
+    <string name="title_message">消息</string>
+    <string name="title_release">发布</string>
     <string name="title_activity_attention">attention</string>
     <string name="title_activity_edit">EditActivity</string>
     <string name="large_text">
@@ -98,7 +101,11 @@
         "when a user tries to pick up one of cards.\n\n"
     </string>
     <string name="action_settings">Settings</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
     <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string-array name="indicator_title">
+        <item>答答</item>
+        <item>问问</item>
+    </string-array>
 </resources>

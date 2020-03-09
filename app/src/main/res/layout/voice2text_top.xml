@@ -3,19 +3,21 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/divider_height"
+        android:layout_gravity="bottom"
+        android:background="?android:attr/listDivider" />
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="20px"
         android:text="语音文字转换"
-        android:textSize="18sp"/>
-    <View
+        android:textSize="18sp" />
 
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/divider_height"
-        android:layout_gravity="bottom"
-        android:background="?android:attr/listDivider" />
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
